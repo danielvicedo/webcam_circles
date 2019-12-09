@@ -14,7 +14,9 @@ Those parameters limit the minimum and maximum radius of which the circles can h
 
 **MIN_CIRCLE_DIST**
 
-This parameter limits the minimum distance between circles. More precisely, the center of those circles. If the number is smaller than the radius of a circle it may falsely detect more circles than the ones that are really in the image.
+This parameter limits the minimum distance between circles. More precisely, the center of those circles. If the number is too small more than one circle may be detected from the same center-point of a circle.
+
+![ScreenShot](https://github.com/danielvicedo/webcam_circles/blob/master/media/MIN_CIRCLE_DIST.png)
 
 **HOUGH_ACCUM_RESOLUTION**
 
@@ -22,8 +24,15 @@ This parameter determines how close the detection is in comparison to the real i
 
 **CANNY_EDGE_TH**
 
-This parameter is related to the Canny algorithm. It is used to detect edges inside the image.
+This parameter is related to the Canny algorithm. It is used to detect edges inside the image. If it is too small it will falsely detect some extra circles.
+
+![ScreenShot](https://github.com/danielvicedo/webcam_circles/blob/master/media/CANNY_EDGE.png)
 
 **HOUGH_ACCUM_TH**
 
-This parameter is used as a threshold where above it the code will search for a circle. If it is too small, false circles may be detected.
+This parameter is used as a threshold where above it the code will search for a circle. If it is too small, false circles may be detected around the true center of the original circle.
+
+![ScreenShot](https://github.com/danielvicedo/webcam_circles/blob/master/media/HOUGH_ACCUM_TH.png)
+
+
+- **Bibliography**
